@@ -36,8 +36,7 @@ void *lopback_task(void *arg)
         if ((res = sock_udp_recv(&sock, buf, sizeof(buf), SOCK_NO_TIMEOUT,
                                  &remote)) >= 0) {
             buf[res] = '\0';
-
-            printf("Received at %llu : %s\n", xtimer_now_usec64() ,buf);
+            printf("Received: %s\n", buf);
             
             xtimer_sleep(1);
             
