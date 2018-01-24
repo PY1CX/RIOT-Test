@@ -45,7 +45,7 @@ int main(void)
                                 THREAD_PRIORITY_MAIN, 0, rcv, NULL, "rcv");
 
     /*
-    * Init the Mailbox M (first argument) with the queue rcv_queue with size RCV_QUEUE_SIZE
+    * Init the Mailbox M
     */
     mbox_init( &m , &msg, 8);
 
